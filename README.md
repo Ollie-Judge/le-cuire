@@ -18,10 +18,6 @@ To Promote Allan le Chef's new line of cooking utensils
 * Results will be visually appealing to the user.
 ### Home page
 
-### Walks Page
-
-### About page
-
 -------
 ## Testing
 
