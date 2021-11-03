@@ -106,6 +106,11 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/manage_recipes")
+def manage_recipes():
+    return render_template("manage_recipes.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
