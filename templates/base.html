@@ -8,11 +8,44 @@
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Great+Vibes&display=swap" rel="stylesheet">
     {% block styles %}
     {% endblock %}
-    <title>Meals Of Mastery</title>
+    <title>Alain le Chef's Meals Of Mastery</title>
 </head>
 <body>
+
+    <header>
+        <!-- regular navbar -->
+        <nav class="nav-extended  deep-orange darken-4 nav">
+          <div class="nav-wrapper">
+            <a href="{{ url_for('get_recipes') }}" class="brand-logo">Alain le Chef's: <em class="brand-sublogo">Meals Of Mastery</em> <em class="tagline">Master the kitchen</em></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Manage Recipes</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Log Out</a></li>
+                <li><a href="#">Register</a></li>
+              </ul>
+          </div>
+        </nav>
+          <!-- mobile side nav-->
+          <ul class="sidenav" id="mobile-demo">
+            <li><h4 class="center-align mobile-heading">Meals Of Mastery</h4></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Manage Recipes</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+    </header>
 
     {% block content %}
     {% endblock %}
