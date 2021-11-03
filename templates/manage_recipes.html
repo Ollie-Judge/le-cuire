@@ -3,20 +3,77 @@
 
     <h3 class="center-align">Manage Recipes</h3>
 
-    <div class="row">
+    <div class="row card-panel">
         <form class="col s12" method="POST" action="">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="fas fa-user-circle prefix"></i>
-              <input id="icon_prefix" type="text" class="validate">
-              <label for="icon_prefix">First Name</label>
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-scroll prefix"></i>
+                <input id="recipe_type" name="recipe_type" minlength="5" mexlength="50"
+                type="text" class="validate" required>
+                <label for="recipe_name">Recipe Name</label>
+                </div>
             </div>
-            <div class="input-field col s12">
-            <i class="fas fa-user-circle prefix"></i>
-            <input id="icon_telephone" type="tel" class="validate">
-            <label for="icon_telephone">Telephone</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-utensils prefix"></i>
+                    <select required name="recipe_type" id="recipe_type">
+                      <option value="" disabled selected>Choose Your Recipe Type</option>
+                      <option value="1">Breakfast</option>
+                      <option value="2">Lunch</option>
+                      <option value="3">Dinner</option>
+                      <option value="3">Baking</option>
+                    </select>
+                  </div>
             </div>
-          </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-drumstick-bite prefix"></i>
+                    <textarea id="ingredients" name="ingredients"  minlength="5" maxlength="500" 
+                    class="materialize-textarea" required></textarea>
+                    <label for="ingredients">Ingredients</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-mortar-pestle prefix"></i>
+                    <textarea id="how_to_cook" name="how_to_cook" minlength="5" maxlength="800"
+                    class="materialize-textarea" required></textarea>
+                    <label for="how_to_cook">How to Cook The Recipe</label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-hourglass-start prefix"></i>
+                <textarea id="prep_time" name="prep_time" minlength="5" maxlength="50"
+                class="materialize-textarea" required></textarea>
+                <label for="prep_time">Preperation Time</label>
+            </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-hourglass-half prefix"></i>
+                    <textarea id="cook_time" name="cook_time" minlength="5" maxlength="50"
+                    class="materialize-textarea" required></textarea>
+                    <label for="cook_time">Cooking Time</label>
+                </div>
+             </div>
+             <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-hourglass-end prefix"></i>
+                    <textarea id="cleanup_time" name="cleanup_time" minlength="5" maxlength="50"
+                    class="materialize-textarea" required></textarea>
+                    <label for="cleanup_time">Cleaning Time</label>
+                </div>
+             </div>
+             <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-hourglass prefix"></i>
+                    <textarea id="total_time" name="total_time" minlength="5" maxlength="50"
+                    class="materialize-textarea" required></textarea>
+                    <label for="total_time">Total Time</label>
+                </div>
+            </div>
+
         </form>
       </div>
 
