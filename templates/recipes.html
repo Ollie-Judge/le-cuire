@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    
-
     {% for recipe in recipes %}
         {{ recipe.recipe_type }}<br>
         {{ recipe.ingredients }}<br>
@@ -10,5 +8,20 @@
         {{ recipe.cook_time }}<br>
         {{ recipe.cleanup_time }}<br>
     {% endfor %}
+
+    <ul class="collapsible popout">
+        <li>
+          <div class="collapsible-header"><i class="fas fa-utensils"></i>First</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="fas fa-utensils"></i>Second</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="fas fa-utensils"></i>Third</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+      </ul>
 
 {% endblock %}
