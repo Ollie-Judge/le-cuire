@@ -2,9 +2,7 @@
 ------
 ## About Le Cuire
 
-Le Cuire is the latest and greatest website index for cooking recipes, initially the dream child of 6 time michellin star chef Alain le chef in 2015, Alain le chef sought out the most competent of designers to create a chic and stylish website that can compete with the best of the best in the cooking industry.
-------
-
+Le Cuire is the latest and greatest website index for cooking recipes, initially the dream child of 6 time michellin star chef Alain le chef in 2015. In late 2016 Alain le chef sought out the most competent of designers to create a chic and stylish website that can compete with the best of the best in the cooking recipe industry. Alain's vision was for all chefs from around the world to be able to collaborate on an online cookbook that is acessible to everybody, containing the tastiest dishes from around the globe, acessible from right within your own home.
 ------
 ## User Requirements
 Find and Share Recipes
