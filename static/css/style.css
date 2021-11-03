@@ -18,3 +18,7 @@ body {
     background-color: #FFF8D9;
     font-family: 'EB Garamond', serif;
 }
+
+.flashes h4 {
+    line-height: 2;
+}
