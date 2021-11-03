@@ -26,7 +26,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="#">Manage Recipes</a></li>
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="#">Log Out</a></li>
@@ -39,7 +39,7 @@
             <li><h4 class="center-align mobile-heading">Le Cuire</h4></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('get_recipes') }}">Recipes</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="#">Manage Recipes</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="#">Log Out</a></li>
