@@ -34,6 +34,7 @@ def get_recipes():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+        # Cheks if the username exists in mongo
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -47,12 +48,16 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
+        # Saves the new user as a session cookie
+
         session["user"] = request.form.get("username").lower()
         flash("Thank You For Registering With Le Cuire")
     return render_template("register.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    if request.method == "POST":
+
     return render_template("login.html")
 
 
