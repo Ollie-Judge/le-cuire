@@ -1,8 +1,8 @@
-# meals-of-mastery
+# Le Cuire
 ------
-## About Meals Of Mastery
+## About Le Cuire
 
-Meals of Mastery is the latest and greatest website index for cooking recipes, initially the dream child of 6 time michellin star chef Alain le chef in 2015, Alain le chef sought out the most competent of designers to create a chic and stylish website that can compete with the best of the best in the cooking industry.
+Le Cuire is the latest and greatest website index for cooking recipes, initially the dream child of 6 time michellin star chef Alain le chef in 2015, Alain le chef sought out the most competent of designers to create a chic and stylish website that can compete with the best of the best in the cooking industry.
 ------
 
 ------
