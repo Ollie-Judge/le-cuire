@@ -1,27 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for recipe in recipes %}
-        {{ recipe.recipe_type }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.how_to_cook }}<br>
-        {{ recipe.cook_time }}<br>
-        {{ recipe.cleanup_time }}<br>
-    {% endfor %}
 
     <ul class="collapsible popout">
-        <li>
-          <div class="collapsible-header"><i class="fas fa-utensils"></i>First</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header"><i class="fas fa-utensils"></i>Second</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header"><i class="fas fa-utensils"></i>Third</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% for recipe in recipes %}
+            <li>
+                <div class="collapsible-header amber">
+                    <i class="fas fa-utensils tooltipped" data-position="left" data-tooltip="Click here to reveal a delicious recipe"></i>
+                    <h6>{{ recipe.recipe_name }}</h6>
+                </div>
+                <div class="collapsible-body">
+                    <h6>Recipe Type:</h6>
+                        <strong>{{ recipe.recipe_type }}</strong>
+                    <h6>Ingredients:</h6>
+                        <strong>{{ recipe.ingredients }}</strong>
+                    <h6>Cooking Instructions:</h6>
+                        <strong>{{ recipe.how_to_cook}}</strong>
+                    <h6>Preperation Time</h6>
+                        <strong>{{ recipe.prep_time }}</strong>
+                    <h6>Cook Time</h6>
+                        <strong>{{ recipe.cook_time }}</strong>
+                    <h6>Clean-up Time</h6>
+                        <strong>{{ recipe.cleanup_time }}</strong>
+                    <h6>Total Time Spent Preparing, Cooking and Cleaning up</h6>
+                        <strong>{{ recipe.total_time }}</strong>
+                </div>
+            </li>
+        {% endfor %}
       </ul>
 
 {% endblock %}
