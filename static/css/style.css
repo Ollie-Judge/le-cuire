@@ -30,3 +30,27 @@ body {
 .form-button {
     font-family: 'EB Garamond', serif;
 }
+
+/* Recipes */
+
+.recipe-popout {
+    margin: 7% auto;
+}
+
+.icon {
+    margin: auto 0.7%;
+}
+
+.recipeTitle {
+    margin: auto 5%;
+    font-size: 1.5em;
+}
+
+.btn-div {
+    margin: auto 5% auto auto;
+}
+
+
+.btn-small {
+    margin: auto 0.87em;
+}
