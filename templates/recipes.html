@@ -2,12 +2,20 @@
 {% block content %}
 
 
-    <ul class="collapsible popout">
+    <ul class="collapsible popout recipe-popout">
         {% for recipe in recipes %}
             <li>
-                <div class="collapsible-header amber">
-                    <i class="fas fa-utensils tooltipped" data-position="left" data-tooltip="Click here to reveal a delicious recipe"></i>
-                    <h6>{{ recipe.recipe_name }}</h6>
+                <div class="collapsible-header amber col s6 offset-s6">
+                    <div class="icon">
+                        <i class="fas fa-utensils tooltipped col s1" data-position="left" data-tooltip="Click here to reveal a delicious recipe"></i>
+                    </div>
+                    <div class="recipeTitle">
+                        <h6>{{ recipe.recipe_name }}</h6>
+                    </div>
+                    <div class="btn-div">
+                        <a href="" class="btn-small">Edit</a>
+                        <a href="" class="btn-small">Done</a>
+                    </div>
                 </div>
                 <div class="collapsible-body">
                     <h6>Recipe Type:</h6>
