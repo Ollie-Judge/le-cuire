@@ -4,51 +4,57 @@
     <h3 class="center-align">Manage Recipes</h3>
 
     <div class="row card-panel">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12 recipe-form" method="POST" action="{{ url_for('manage_recipes') }}">
+            <!-- Recipe Name -->
             <div class="row">
                 <div class="input-field col s12">
                 <i class="fas fa-scroll prefix"></i>
-                <input id="recipe_type" name="recipe_type" minlength="5" mexlength="50"
+                <input id="recipe_name" name="recipe_name" minlength="5" mexlength="50"
                 type="text" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
                 </div>
             </div>
+            <!-- Recipe Type -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-utensils prefix"></i>
                     <select name="recipe_type" id="recipe_type" class="validate" required>
                         <option value="" disabled selected>Choose your Recipe Type</option>
-                        <option value="breakfast">Breakfast</option>
-                        <option value="lunch">Lunch</option>
-                        <option value="dinner">Dinner</option>
-                        <option value="baking">Baking</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Dessert">Dessert</option>
                       </select>
                   </div>
             </div>
+            <!-- Recipe Ingredients -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-drumstick-bite prefix"></i>
-                    <textarea id="ingredients" name="ingredients"  minlength="5" maxlength="500" 
+                    <textarea id="ingredients" name="ingredients"  minlength="5" maxlength="1000" 
                     class="materialize-textarea" required></textarea>
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
+            <!-- How To Cook The Recipe -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-mortar-pestle prefix"></i>
-                    <textarea id="how_to_cook" name="how_to_cook" minlength="5" maxlength="800"
+                    <textarea id="how_to_cook" name="how_to_cook" minlength="5" maxlength="5000"
                     class="materialize-textarea" required></textarea>
                     <label for="how_to_cook">How to Cook The Recipe</label>
                 </div>
             </div>
+            <!-- Prep Time -->
             <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-hourglass-start prefix"></i>
-                <textarea id="prep_time" name="prep_time" minlength="5" maxlength="50"
-                class="materialize-textarea" required></textarea>
-                <label for="prep_time">Preperation Time</label>
+                <div class="input-field col s12">
+                    <i class="fas fa-hourglass-start prefix"></i>
+                    <textarea id="prep_time" name="prep_time" minlength="5" maxlength="50"
+                    class="materialize-textarea" required></textarea>
+                    <label for="prep_time">Preperation Time</label>
+                </div>
             </div>
-            </div>
+            <!-- Cooking Time -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-hourglass-half prefix"></i>
@@ -57,6 +63,7 @@
                     <label for="cook_time">Cooking Time</label>
                 </div>
              </div>
+             <!-- Cleaning Time -->
              <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-hourglass-end prefix"></i>
@@ -65,12 +72,21 @@
                     <label for="cleanup_time">Cleaning Time</label>
                 </div>
              </div>
+             <!-- Total Time Spent -->
              <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-hourglass prefix"></i>
                     <textarea id="total_time" name="total_time" minlength="5" maxlength="50"
                     class="materialize-textarea" required></textarea>
                     <label for="total_time">Total Time</label>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn form-button light-green lighten-3 black-text" type="submit">
+                        Submit Your Recipe
+                    </button>
                 </div>
             </div>
 
