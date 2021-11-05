@@ -123,7 +123,10 @@ def manage_recipes():
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe has been Added")
         return redirect(url_for("get_recipes"))
-    return render_template("manage_recipes.html")
+
+    mealType = mongo.db.mealType.find().sort("mealType", 1)
+    return render_template("manage_recipes.html", mealType=mealType)
+
 
 
 if __name__ == "__main__":
