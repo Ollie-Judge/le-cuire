@@ -2,7 +2,7 @@
 {% block content %}
 
 
-    <ul class="collapsible popout recipe-popout">
+    <ul class="collapsible popout">
         {% for recipe in recipes %}
             <li>
                 <div class="collapsible-header amber col s6 offset-s6">
@@ -24,18 +24,18 @@
                         <strong>{{ recipe.ingredients }}</strong>
                     <h6>Cooking Instructions:</h6>
                         <strong>{{ recipe.how_to_cook}}</strong>
-                    <h6>Preperation Time</h6>
+                    <h6>Preperation Time:</h6>
                         <strong>{{ recipe.prep_time }}</strong>
-                    <h6>Cook Time</h6>
+                    <h6>Cook Time:</h6>
                         <strong>{{ recipe.cook_time }}</strong>
-                    <h6>Clean-up Time</h6>
+                    <h6>Clean-up Time:</h6>
                         <strong>{{ recipe.cleanup_time }}</strong>
-                    <h6>Total Time Spent Preparing, Cooking and Cleaning up</h6>
+                    <h6>Total Time Spent Preparing, Cooking and Cleaning up:</h6>
                         <strong>{{ recipe.total_time }}</strong>
                         <p><em>Created by: {{ recipe.created_by }}</em></p>
                 </div>
             </li>
         {% endfor %}
-      </ul>
+    </ul>
 
 {% endblock %}
