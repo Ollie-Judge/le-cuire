@@ -14,7 +14,7 @@ To Promote Alain le Chef's new line of cooking utensils
 * The website will allow the user to store and easily access cooking recipes (including fields like: ingrediants, preperation steps, required tools and cuisine).
 * Backend and front end functionality for users to locate recipes based on the recipe's fields.
 * Results will be visually appealing to the user.
-### Home page
+### Home Page
 
 -------
 ## Testing
@@ -32,6 +32,9 @@ To Promote Alain le Chef's new line of cooking utensils
 ## Deployment
 
 --------
-## credits
+## What To Improve Or Add
+
+--------
+## Credits
 
 * https://materializecss.com/
