@@ -129,6 +129,14 @@ def manage_recipes():
     return render_template("manage_recipes.html", mealType=mealType)
 
 
+# The below code tells the edit page to find the correct database item that was selected in the recipes page by clicking the edit button
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
+
+    mealType = mongo.db.mealType.find().sort("mealType", 1)
+    return render_template("edit_recipe.html", recipe=recipe, mealType=mealType)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
