@@ -106,6 +106,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Connects the mongo database to the recipes page by taking the information collected from the manage recipes form when submitted
 @app.route("/manage_recipes", methods=["GET", "POST"])
 def manage_recipes():
     if request.method == "POST":
