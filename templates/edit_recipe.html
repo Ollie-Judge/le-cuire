@@ -10,20 +10,23 @@
                     <div class="input-field col s12">
                     <i class="fas fa-scroll prefix"></i>
                     <input id="recipe_name" name="recipe_name" minlength="5" mexlength="50"
-                    type="text" class="validate" required>
+                        value="{{ recipe.recipe_name }}" type="text" class="validate" required>
                     <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
                 <!-- Recipe Type -->
-                <div class="row">
+                <div class="row recipe-type-selection">
                     <div class="input-field col s12">
                         <i class="fas fa-utensils prefix"></i>
                         <select name="recipe_type" id="recipe_type" class="validate" required>
-                            <option value="" disabled selected>Choose your Recipe Type</option>
-                            <option value="Breakfast">Breakfast</option>
-                            <option value="Lunch">Lunch</option>
-                            <option value="Dinner">Dinner</option>
-                            <option value="Dessert">Dessert</option>
+                            <option value="" disabled>Choose your Recipe Type</option>
+                            {% for mealType in mealType %}
+                                {% if mealType.recipe_type == recipe.recipe_type %}
+                                    <option value="{{ mealType.recipe_type }}" selected>{{ recipe.recipe_type }}</option>
+                                {% else %}
+                                    <option value="{{ mealType.recipe_type }}">{{ mealType.recipe_type }}</option>
+                                {% endif %}
+                            {% endfor %}
                         </select>
                     </div>
                 </div>
@@ -32,7 +35,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-drumstick-bite prefix"></i>
                         <textarea id="ingredients" name="ingredients"  minlength="5" maxlength="1000" 
-                        class="materialize-textarea" required></textarea>
+                        class="materialize-textarea" required>{{ recipe.ingredients }}</textarea>
                         <label for="ingredients">Ingredients</label>
                     </div>
                 </div>
@@ -41,7 +44,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-mortar-pestle prefix"></i>
                         <textarea id="how_to_cook" name="how_to_cook" minlength="5" maxlength="5000"
-                        class="materialize-textarea" required></textarea>
+                        class="materialize-textarea" required>{{ recipe.how_to_cook}}</textarea>
                         <label for="how_to_cook">How to Cook The Recipe</label>
                     </div>
                 </div>
@@ -50,7 +53,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-hourglass-start prefix"></i>
                         <textarea id="prep_time" name="prep_time" minlength="5" maxlength="50"
-                        class="materialize-textarea" required></textarea>
+                        class="materialize-textarea" required>{{ recipe.prep_time }}</textarea>
                         <label for="prep_time">Preperation Time</label>
                     </div>
                 </div>
@@ -59,7 +62,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-hourglass-half prefix"></i>
                         <textarea id="cook_time" name="cook_time" minlength="5" maxlength="50"
-                        class="materialize-textarea" required></textarea>
+                        class="materialize-textarea" required>{{ recipe.cook_time }}</textarea>
                         <label for="cook_time">Cooking Time</label>
                     </div>
                 </div>
@@ -68,7 +71,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-hourglass-end prefix"></i>
                         <textarea id="cleanup_time" name="cleanup_time" minlength="5" maxlength="50"
-                        class="materialize-textarea" required></textarea>
+                        class="materialize-textarea" required>{{ recipe.cleanup_time }}</textarea>
                         <label for="cleanup_time">Cleaning Time</label>
                     </div>
                 </div>
@@ -77,13 +80,14 @@
                     <div class="input-field col s12">
                         <i class="fas fa-hourglass prefix"></i>
                         <textarea id="total_time" name="total_time" minlength="5" maxlength="50"
-                        class="materialize-textarea" required></textarea>
+                        class="materialize-textarea" required>{{ recipe.total_time }}</textarea>
                         <label for="total_time">Total Time</label>
                     </div>
                 </div>
-                <!-- Submit Button -->
+                <!-- Edit and Cancel Buttons -->
                 <div class="row">
                     <div class="col s12 center-align">
+                        <a href="{{ url_for('get_recipes') }}" class="btn-large red">Cancel</a>
                         <button class="btn form-button light-green lighten-3 black-text" type="submit">
                             Edit Recipe
                         </button>
