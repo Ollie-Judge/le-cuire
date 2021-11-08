@@ -19,6 +19,14 @@ body {
     font-family: 'EB Garamond', serif;
 }
 
+button {
+    font-family: 'EB Garamond', serif;
+} 
+
+.btn {
+    font-family: 'EB Garamond', serif;
+}
+
 /* Registration */
 
 .flashes h4 {
