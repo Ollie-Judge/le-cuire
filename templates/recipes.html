@@ -13,8 +13,10 @@
                         <h6>{{ recipe.recipe_name }}</h6>
                     </div>
                     <div class="btn-div">
+                        {% if session.user|lower == recipe.created_by|lower %}
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
                         <a href="" class="btn-small">Done</a>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="collapsible-body">

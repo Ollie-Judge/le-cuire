@@ -132,8 +132,22 @@ def manage_recipes():
 # The below code tells the edit page to find the correct database item that was selected in the recipes page by clicking the edit button
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if request.method == "POST":
+        submit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_type": request.form.get("recipe_type"),
+            "ingredients": request.form.get("ingredients"),
+            "how_to_cook": request.form.get("how_to_cook"),
+            "prep_time":request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "cleanup_time": request.form.get("cleanup_time"),
+            "total_time": request.form.get("total_time"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe has successfully been updated")
 
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     mealType = mongo.db.mealType.find().sort("mealType", 1)
     return render_template("edit_recipe.html", recipe=recipe, mealType=mealType)
 
