@@ -13,8 +13,8 @@
                 <p>To search for a specific recipe or meal type, search the key words: "Breakfast", "Lunch", "Dinner", "Starter", "Main" or "Dessert".</p>
             </div>
             <div class="col s12 m4">
-                <a href="{{ url_for('get_recipes') }}" class="red btn">Reset</a>
-                <button type="submit" class="btn">
+                <a href="{{ url_for('get_recipes') }}" class="deep-orange darken-4 btn">Reset</a>
+                <button type="submit" class="btn  light-green lighten-3 black-text">
                     <i class="fas fa-search"></i> Search
                 </button>
             </div>
@@ -22,7 +22,7 @@
     </form>
 </div>
 
-    {% if recipe|length > 0 %}
+    {% if recipes|length > 0 %}
 
         <ul class="collapsible popout">
             {% for recipe in recipes %}
@@ -36,8 +36,8 @@
                         </div>
                         <div class="btn-div">
                             {% if session.user|lower == recipe.created_by|lower %}
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
-                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete</a>
+                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small  light-green lighten-3 black-text">Edit</a>
+                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small deep-orange darken-4 ">Delete</a>
                             {% endif %}
                         </div>
                     </div>
