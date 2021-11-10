@@ -27,6 +27,10 @@ button {
     font-family: 'EB Garamond', serif;
 }
 
+a:visited {
+    text-decoration: none;
+  }
+
 /* Registration */
 
 .flashes h4 {
@@ -61,6 +65,23 @@ button {
 
 .btn-small {
     margin: auto 0.87em;
+}
+
+/* Profile */
+
+.fb {
+    font-size: 5em;
+    color: #43609C;
+}
+
+.ig {
+    font-size: 5em;
+    color: #C13584;
+}
+
+.twtr {
+    font-size: 5em;
+    color: #55acee;
 }
 
 /* Footer */
