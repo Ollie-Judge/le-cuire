@@ -19,7 +19,7 @@ To Promote Alain le Chef's new line of cooking utensils
 -------
 ## Testing
 
-Testing can be found in the [a relative link](testing.md) testing.md file 
+Testing can be found in the [a testing.md file ](testing.md) 
 --------
 ## Deployment
 
