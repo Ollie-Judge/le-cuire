@@ -120,4 +120,15 @@ Deploying to Heroku:
 --------
 ## Credits
 
+### Places i got elements and styling from
+
 * https://materializecss.com/
+* https://fonts.google.com/
+* https://colorhunt.co/
+
+###
+Places i got help from
+
+* https://developer.mozilla.org/en-US/
+* https://stackoverflow.com/
+* Tutor support
