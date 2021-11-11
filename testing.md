@@ -20,6 +20,9 @@
 
 ------
 ### Debugging
+I tested the project using the builtin debug tool to check how each page responds, here is the outcome:
+![Page debugging](assets/img/CorrectDebug.png)
+![Page debugging 2](assets/img/CorrectDebug2.png)
 
 ------
 ### Code Validation
@@ -44,10 +47,10 @@
 ![Corrected Home](assets/img/homeVal1.png)
 
 #### Recipes Page
-![Recipes validation html](assets/img/recipes.png)
+![Recipes validation html](assets/img/Recipes.png)
 
 #### Register Page
-![Register page validation](assets/img/register.png)
+![Register page validation](assets/img/Register.png)
 
 #### Login Page
 ![Log ion page validation](assets/img/login.png)
