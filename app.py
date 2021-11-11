@@ -28,7 +28,7 @@ def home():
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
- 
+
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -64,29 +64,30 @@ def register():
 
     return render_template("register.html")
 
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         # Checks if the username exists in mongo
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
+
         if existing_user:
             # Makes sure the password matches the user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {} to Le Cuire".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+                                    existing_user["password"],
+                                    request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {} to Le Cuire".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
-                #invalid password
+                # invalid password
                 flash("The credentials you typed are wrong")
                 return redirect(url_for("login"))
 
-
-        else: 
+        else:
             # If the username doesnt exist
             flash("The credentials you typed are wrong")
             return redirect(url_for("login"))
@@ -114,7 +115,8 @@ def logout():
     return redirect(url_for("login"))
 
 
-# Connects the mongo database to the recipes page by taking the information collected from the manage recipes form when submitted
+# Connects the mongo database to the recipes page by taking the
+# information collected from the manage recipes form when submitted
 @app.route("/manage_recipes", methods=["GET", "POST"])
 def manage_recipes():
     if request.method == "POST":
@@ -123,7 +125,7 @@ def manage_recipes():
             "recipe_type": request.form.get("recipe_type"),
             "ingredients": request.form.get("ingredients"),
             "how_to_cook": request.form.get("how_to_cook"),
-            "prep_time":request.form.get("prep_time"),
+            "prep_time": request.form.get("prep_time"),
             "cook_time": request.form.get("cook_time"),
             "cleanup_time": request.form.get("cleanup_time"),
             "total_time": request.form.get("total_time"),
@@ -137,7 +139,8 @@ def manage_recipes():
     return render_template("manage_recipes.html", mealType=mealType)
 
 
-# The below code tells the edit page to find the correct database item that was selected in the recipes page by clicking the edit button
+# The below code tells the edit page to find the correct database
+# item that was selected in the recipes page by clicking the edit button
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -146,7 +149,7 @@ def edit_recipe(recipe_id):
             "recipe_type": request.form.get("recipe_type"),
             "ingredients": request.form.get("ingredients"),
             "how_to_cook": request.form.get("how_to_cook"),
-            "prep_time":request.form.get("prep_time"),
+            "prep_time": request.form.get("prep_time"),
             "cook_time": request.form.get("cook_time"),
             "cleanup_time": request.form.get("cleanup_time"),
             "total_time": request.form.get("total_time"),
@@ -157,7 +160,8 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     mealType = mongo.db.mealType.find().sort("mealType", 1)
-    return render_template("edit_recipe.html", recipe=recipe, mealType=mealType)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, mealType=mealType)
 
 
 @app.route("/delete_recipe/<recipe_id>")
@@ -170,4 +174,4 @@ def delete_recipe(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True) #change this to False when finished development
+            debug=True)    # change this to False when finished development
