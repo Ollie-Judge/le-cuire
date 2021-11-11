@@ -20,12 +20,12 @@ This is where all the information that a customer new or old that they might wan
 
 * The website will have 4 information tiles: seasonal recipes, news, reviews and events
 
-### login Page
+### Login Page
 Login page should be simple and easy to follow, it is a page used for loggin in, it must be in the same style as the other pages for uniformity, it should work well and feel effortless to use.
 
 * This page will just have login functionality, no extras as they arent needed 
 
-### recipe index page
+### Recipe Index Page
 This is the page that everybody has come for, so it must be easy to use and useful for people looking for recipes, the recipes should be easy to find and it should be an enjoyable experience
 
 This page will have:
@@ -33,7 +33,7 @@ This page will have:
 * Drop down sections for each recipe, the recipes will be listed in rows with clickable sections to open up to the ingredients and instructions making it interactive and to improve the users experience
 * Search functionality to cut the users searching time down and to make it easier for the user to find what theyre looking for 
 
-### register page
+### Register Page
 Similar to the login page, only thing needed is register functionality, enter your details and start using the website to its full potential
 
 This page will have:
