@@ -28,13 +28,14 @@ def home():
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
+ 
     return render_template("recipes.html", recipes=recipes)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    recipes = mongo.db.recipes.find({"$text": {"$search": query}})
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -95,7 +96,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    #gets the users username from mongo
+    # gets the users username from mongo
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
