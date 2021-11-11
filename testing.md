@@ -77,9 +77,10 @@ I tested the project using the builtin debug tool to check how each page respond
 ![Add Edit Recipe validation Corrected](assets/img/EditRecipes.png)
 ------
 #### CSS
-
+![CSS Validation](assets/img/cssValidation.png)
 ------
 #### JavaScript
+![JavaScript validation](assets/img/jsValidation.png)
 
 ------
 #### Python
