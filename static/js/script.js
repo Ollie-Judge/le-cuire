@@ -36,3 +36,5 @@ $(document).ready(function(){
     });
   }
 });
+
+/* ValidateMaterialize function was taken from the tutorial video from code institute*/
