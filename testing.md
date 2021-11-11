@@ -82,6 +82,12 @@ I tested the project using the builtin debug tool to check how each page respond
 #### JavaScript
 
 ------
+#### Python
+![Python validation Errors](assets/img/PythonValidation.png)
+
+##### Python Correction of Validation
+![Python validation Corrected](assets/img/PythonValidationCorrected.png)
+------
 ### Further Testing
 
 * The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
