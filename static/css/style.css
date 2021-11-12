@@ -93,3 +93,22 @@ footer {
     padding: 0;
     margin: 2em auto 0 auto;
 }
+
+/* Newsletter */
+
+.subscribe {
+    background-color: #D5DBB3;
+    border-radius: 0.25em;
+    padding: 1em;
+    border: none;
+    margin: 0.5em auto auto;
+}
+
+.subscribe:hover {
+    background-color: #EBA83A;
+}
+
+#news-email {
+    margin: 0.4em auto auto;
+    color: black;
+}
