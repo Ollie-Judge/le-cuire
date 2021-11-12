@@ -21,7 +21,6 @@ Le Cuire is the latest and greatest website index for cooking recipes, initially
 ## Owner Goals
 * To Promote Alain le Chef's new line of cooking utensils
 * To keep a loyal base of recipe adders and creators
-* 
 -------
 ## Wire Frames
 Here is the basic outline for the project
@@ -108,7 +107,7 @@ page contains:
 * JQuery
     * Jquery is a simpler version of JavaScript which for this project is used for more elements than javascript, JQuery was used to bring user interactivity to dropdown elements such as the meal type or the recipes dropdown.
 * Flask
-    * 
+    * Flaks is a webframework that i used to build the basis of the application.
 * Heroku
     * Heroku is the deployment service i used to deploy the website.
 * MongoDB
