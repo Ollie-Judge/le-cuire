@@ -164,9 +164,9 @@ Deploying to Heroku:
 
 ### Places i got elements and styling from
 
-* https://materializecss.com/
-* https://fonts.google.com/
-* https://colorhunt.co/
+* https://materializecss.com/ - used for the main html elements
+* https://fonts.google.com/ - to decide on what fonts to use
+* https://colorhunt.co/ - to decide on what colour scheme
 
 ### Places i got help from
 
