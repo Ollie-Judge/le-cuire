@@ -104,6 +104,44 @@ I tested the project using the builtin debug tool to check how each page respond
 * Each section of the website that has interactive functionality, for example navbar, clickable buttons, javascript validation for correct form input and forms have all been manually tested.
 
 ------
+### lighthouse testing
+![Screen shot of lighthouse testing](assets/img/lighthouse.png)
+
+#### Things ive fixed because of the audit
+
+* added meta description
+* added for to all input elements
+
+#### Areas of improvement
+
+##### Progressive Web App
+* I must register a service worker
+* Make sure that the app can work offline
+* Needs to use HTTPS
+* Redirect http traffic to https
+* Theres no notification to install the website as an aplication
+* No custom splash screen configuration
+* No "<meta name = "theme-color">" found
+
+##### Accessibility
+
+* No discernable name in links
+* Background and foreground colours do not contrast sufficiently
+
+##### Best Practices
+
+* Needs to use HTTPS
+* Make font sizes bigger
+* No passive listeners used
+* Doesnt use http/2 for all of its resources
+* Does not open external anchors using rel="noopener"
+* Manifests short_name will be truncated when displayed on homescreen
+
+##### SEO
+* Doesnt use legible fonts 
+* No meta tag description
+
+------
 
 ### Known Bugs
 
