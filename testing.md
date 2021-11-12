@@ -18,6 +18,12 @@
 
     B.I want to be albe ot maintain contact with the owner, for example via a newsletter, this is done by adding a newsletter option, which can be found in the profile section or at the bottom of the home page.
 
+### Owner Goals
+
+    A. To Promote Alain le Chef's new line of cooking utensils. This has been done through the welcome page by including a news section that details new products and announcements and it has been done in the recipes where there are references to the signature series equipment.
+
+    B. To keep a loyal base of recipe adders and creators, this has been done by having a newsletter which will keep creators upto date on all things Alain le Chef relateed and on things relating to the website, it has also been done by including social media links too. In the future it can be improved by including comments in the recipes section and also include user ratings for the recipes page.
+
 ------
 ### Debugging
 I tested the project using the builtin debug tool to check how each page responds, here is the outcome:
@@ -95,7 +101,10 @@ I tested the project using the builtin debug tool to check how each page respond
 * The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
 * A large amount of testing was done to ensure that all pages were linking correctly.
 * Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+* Each section of the website that has interactive functionality, for example navbar, clickable buttons, javascript validation for correct form input and forms have all been manually tested.
+
+------
 
 ### Known Bugs
 
-* 
+* When viewing on mobile devices the buttons squash up and are not in similar positions to how it looks on computers
