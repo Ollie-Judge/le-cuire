@@ -24,7 +24,7 @@ Le Cuire is the latest and greatest website index for cooking recipes, initially
 -------
 ## Wire Frames
 Here is the basic outline for the project
-![]()
+![Wireframe of the website](assets/img/wireframe.png)
 -------
 ## Features
 * The website will allow the user to store and easily access cooking recipes (including fields like: ingredients, preperation steps, required tools and cuisine).
