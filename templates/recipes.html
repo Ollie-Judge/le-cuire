@@ -10,7 +10,7 @@
                 <i class="fas fa-search prefix"></i>
                 <input type="text" id="query" name="query" minlength="3" class="validate" required>
                 <label for="query">Search Recipes</label>
-                <p>To search for a specific recipe or meal type, search the key words: "Breakfast", "Lunch", "Dinner", "Starter", "Main" or "Dessert".</p>
+                <p>To search for a specific recipe or meal type, search these key words: "Breakfast", "Lunch", "Dinner", "Starter", "Main" or "Dessert" or search for a recipe name.</p>
             </div>
             <div class="col s12 m4">
                 <a href="{{ url_for('get_recipes') }}" class="deep-orange darken-4 btn">Reset</a>
@@ -22,7 +22,7 @@
     </form>
 </div>
 
-    {% if recipes|length > 0 %}
+    {% if recipes|length > 0  %}
 
         <ul class="collapsible popout">
             {% for recipe in recipes %}
